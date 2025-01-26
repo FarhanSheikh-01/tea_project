@@ -1,0 +1,961 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TeaSageAI.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cloud_upload"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4{
+        font-family: "Raleway", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="w3-light-grey">
+    <!-- w3-content defines a container for fixed size centered content, 
+    and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width: 1400px">
+      <!-- Header -->
+      <header class="w3-container w3-center w3-padding-32">
+        <h1><b>TeaSageAI.com</b></h1>
+        <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
+      </header>
+
+      <!-- Grid -->
+      <div class="w3-row">
+        <!-- Blog entries -->
+        <div class="w3-col l8 s12">
+          <!-- Blog entry -->
+          <div class="w3-card-4 w3-margin w3-white">
+            <img
+              src="static\images\intro.jpg"
+              alt="Nature"
+              style="width: 100%"
+            />
+            <div class="w3-container">
+              <h3><b>Introduction</b></h3>
+              <h5>
+                Leveraging Machine Learning for Tea Sickness Detection and
+                Management, <span class="w3-opacity"> January 25, 2025</span>
+              </h5>
+            </div>
+
+            <div class="w3-container">
+              <p>
+                Tea sickness, caused by excessive consumption or chemical
+                interactions, can now be analyzed effectively using machine
+                learning techniques. Learn how we identify symptoms and patterns
+                for better health.
+              </p>
+              <div class="w3-row">
+                <div class="w3-col m8 s12">
+                  <p>
+                    <div class="btn-group">
+                      <a href="/introduction.html" class="btn btn-secondary">
+                        Read More...
+                      </a>
+                    </div>
+                  </p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                  <p>
+                    <span class="w3-padding-large w3-right">
+                      <b>Comments </b> <span class="w3-tag">0</span>
+                    </span>
+                  </p>
+                </div>
+              </div>             
+            </div>
+          </div>
+
+          <!-- Blog entry -->
+          <div class="w3-card-4 w3-margin w3-white">
+            <img
+              src="static\images\management.jpg"
+              alt="Norway"
+              style="width: 100%"
+            />
+            <div class="w3-container">
+              <h3><b>Management System for Tea Sickness</b></h3>
+              <h5>
+                Title description,
+                <span class="w3-opacity">January 24, 2025</span>
+              </h5>
+            </div>
+
+            <div class="w3-container">
+              <p>
+                Our Tea Sickness Management System goes beyond detection by
+                offering personalized solutions. It recommends tea consumption
+                limits, alternative blends, and dietary adjustments tailored to
+                individual health profiles. Explore how machine learning creates
+                actionable insights for a healthier tea experience.
+              </p>
+              <div class="w3-row">
+                <div class="w3-col m8 s12">
+                  <p>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Read More...
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalAlgalLeafSpot">Algal leaf spot</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalRedLeafSpot">Red leaf spot</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalBirdsEyespot">Bird’s eyespot</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalGrayBlight">Gray blight</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalWhiteSpot">White spot</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalAnthracnose">Anthracnose</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#modalBrownBlight">Brown blight</button></li>
+                      </ul>
+                    </div>
+                    
+<!-- Algal Leaf Spot Modal -->
+<div class="modal fade" id="modalAlgalLeafSpot" tabindex="-1" aria-labelledby="modalAlgalLeafSpotLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalAlgalLeafSpotLabel">Algal Leaf Spot</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <div class="modal-body">
+            <p><strong>Overview:</strong> Algal Leaf Spot is caused by a parasitic algal pathogen (<em>Cephaleuros virescens</em>), which infects tea leaves and stems. The disease manifests as small, round, greenish-gray to reddish-brown spots, potentially leading to reduced plant productivity.</p>
+          <img src="static\images\Algal Leaf Spot1.jpg" alt="image404">
+            <p><strong>Symptoms:</strong></p>
+            <ul>
+              <li>Reddish-brown circular lesions on leaves.</li>
+              <li>Slightly raised spots, with a velvety or crusty appearance.</li>
+              <li>Stunted growth and premature defoliation in severe cases.</li>
+            </ul>
+            
+            <p><strong>Preventive Measures:</strong></p>
+            <ul>
+              <li><strong>Improve Air Circulation:</strong>
+                <ul>
+                  <li>Prune tea plants regularly to reduce humidity levels and improve air movement around leaves.</li>
+                  <li>Remove overcrowded or shaded plants.</li>
+                </ul>
+              </li>
+              <li><strong>Proper Irrigation:</strong>
+                <ul>
+                  <li>Avoid overhead irrigation as water splashing spreads algal spores.</li>
+                  <li>Use drip irrigation to minimize leaf wetness.</li>
+                </ul>
+              </li>
+              <li><strong>Weed Control:</strong> Eliminate weeds around tea plants, as they harbor algae and increase disease spread.</li>
+              <li><strong>Balanced Fertilization:</strong>
+                <ul>
+                  <li>Avoid excessive nitrogen application, as it promotes tender leaf growth that is more susceptible to infection.</li>
+                  <li>Use a balanced mix of nutrients, including potassium and phosphorous, to strengthen plant resistance.</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <p><strong>Management Systems:</strong></p>
+            <ul>
+              <li><strong>Chemical Control:</strong>
+                <ul>
+                  <li><strong>Copper-Based Fungicides:</strong> Use copper-based sprays (e.g., copper oxychloride or Bordeaux mixture) during initial symptoms to inhibit algal growth.</li>
+                  <li><strong>Application Timing:</strong> Apply during dry seasons when the disease is less active to prevent outbreaks during the wet season.</li>
+                  <li><strong>Systemic Fungicides:</strong> In severe cases, systemic fungicides with preventive and curative properties can be used.</li>
+                </ul>
+              </li>
+              <li><strong>Cultural Practices:</strong>
+                <ul>
+                  <li><strong>Sanitation:</strong> Regularly remove and destroy infected leaves and branches to limit the spread of spores.</li>
+                  <li><strong>Pruning:</strong> Cut back affected parts of the tea plants to encourage healthy growth.</li>
+                  <li><strong>Mulching:</strong> Use organic mulches to suppress weeds and retain soil moisture without splashing water onto leaves.</li>
+                </ul>
+              </li>
+              <li><strong>Biological Control:</strong>
+                <ul>
+                  <li>Introduce beneficial microorganisms or antagonists that suppress algal growth, such as <strong>Trichoderma spp.</strong> as a biofungicide.</li>
+                  <li>Utilize algae-eating natural predators in eco-friendly farms.</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <p><strong>Monitoring Systems:</strong></p>
+            <ul>
+              <li><strong>Regular Inspections:</strong> Perform weekly or bi-weekly inspections to identify symptoms early.</li>
+              <li><strong>Disease Tracking Tools:</strong> Use sensors or drones to monitor plant health in large tea plantations.</li>
+              <li><strong>Prediction Models:</strong> Implement weather-based models to predict favorable conditions for Algal Leaf Spot outbreaks.</li>
+            </ul>
+          </div>
+          
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Red Leaf Spot Modal -->
+<div class="modal fade" id="modalRedLeafSpot" tabindex="-1" aria-labelledby="modalRedLeafSpotLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalRedLeafSpotLabel">Red Leaf Spot</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Understanding Red Leaf Spot</h6>
+        <p>Red Leaf Spot, caused by <i>Pestalotiopsis spp.</i>, primarily affects the leaves of tea plants. It is characterized by circular or irregular reddish-brown lesions on the leaf surface, which may expand and cause leaf drop, reducing photosynthesis and plant vigor.</p>
+        <img src="static\images\Red Leaf Spot.jpg" alt="image404">
+        <h6>Symptoms</h6>
+        <ul>
+          <li>Reddish-brown circular or irregular spots on leaves.</li>
+          <li>Spots may merge to form larger necrotic patches.</li>
+          <li>Premature leaf drop.</li>
+          <li>Reduction in yield and quality of tea leaves.</li>
+        </ul>
+        
+        <h6>Causes</h6>
+        <ul>
+          <li>High humidity and prolonged wet conditions.</li>
+          <li>Poor air circulation in tea plantations.</li>
+          <li>Infected pruning tools or debris left in the plantation.</li>
+          <li>Nutrient deficiencies, particularly potassium.</li>
+        </ul>
+        
+        <h6>Preventive Measures</h6>
+        <ul>
+          <li><b>Proper Spacing and Pruning:</b> Maintain adequate spacing between tea plants to ensure good airflow. Regular pruning helps to remove excess growth and reduce humidity.</li>
+          <li><b>Sanitation Practices:</b>
+            <ul>
+              <li>Remove and destroy fallen, infected leaves to prevent fungal spores from spreading.</li>
+              <li>Disinfect pruning tools regularly.</li>
+            </ul>
+          </li>
+          <li><b>Soil Health:</b>
+            <ul>
+              <li>Maintain balanced soil nutrition, especially potassium, which strengthens plant defenses.</li>
+              <li>Conduct regular soil tests to monitor nutrient levels.</li>
+            </ul>
+          </li>
+          <li><b>Drainage:</b> Ensure proper drainage in the plantation to avoid waterlogging, which creates a favorable environment for fungal growth.</li>
+        </ul>
+        
+        <h6>Cultural Practices</h6>
+        <ul>
+          <li>Rotate tea plants with other crops that do not host the pathogen to break the disease cycle.</li>
+          <li>Use resistant or tolerant tea plant varieties, if available.</li>
+          <li>Mulch around the plants to reduce splash dispersal of spores.</li>
+        </ul>
+        
+        <h6>Chemical Control</h6>
+        <ul>
+          <li><b>Fungicides:</b> Apply fungicides like <i>Mancozeb</i>, <i>Chlorothalonil</i>, or <i>Copper oxychloride</i> as a preventive measure. Use systemic fungicides like <i>Tebuconazole</i> or <i>Azoxystrobin</i> for severe infections.</li>
+          <li><b>Application Timing:</b> Apply fungicides during the early stages of infection or just after pruning. Reapply after heavy rains as the protective layer may wash off.</li>
+        </ul>
+        
+        <h6>Biological Control</h6>
+        <ul>
+          <li>Introduce beneficial microbes such as <i>Trichoderma spp.</i> or <i>Bacillus subtilis</i> in the soil to suppress fungal pathogens naturally.</li>
+          <li>Use organic sprays like neem oil to reduce fungal activity.</li>
+        </ul>
+        
+        <h6>Weather Monitoring</h6>
+        <p>Use weather data to predict high-risk periods (e.g., rainy or humid seasons) and schedule preventive fungicide sprays accordingly.</p>
+        
+        <h6>Integrated Disease Management (IDM)</h6>
+        <p>Combine cultural, biological, and chemical practices for effective control:</p>
+        <ul>
+          <li>Maintain field hygiene.</li>
+          <li>Monitor for early signs of disease and take immediate action.</li>
+          <li>Alternate chemical and biological controls to reduce dependence on fungicides.</li>
+        </ul>
+        
+        <h6>Long-Term Strategies</h6>
+        <ul>
+          <li>Train workers on disease identification and management techniques.</li>
+          <li>Invest in research to develop resistant tea varieties.</li>
+          <li>Promote sustainable farming practices to reduce environmental impact.</li>
+        </ul>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bird's Eyespot Modal -->
+<div class="modal fade" id="modalBirdsEyespot" tabindex="-1" aria-labelledby="modalBirdsEyespotLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalBirdsEyespotLabel">Bird’s Eyespot</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Overview of Bird’s Eyespot</h6>
+        <p>Bird’s Eyespot, caused by the fungus <i>Drechslera spp.</i>, is a common fungal disease affecting tea plantations. It appears as circular spots on the leaves with light centers surrounded by dark brown rings, resembling a bird’s eye. This disease can lead to significant yield loss if left untreated.</p>
+        <img src="static\images\Birds EyeSpot.jpg" alt="image404">
+        <h6>1. Preventive Measures</h6>
+        <p><strong>Cultural Practices:</strong></p>
+        <ul>
+          <li><b>Shade Management:</b> Maintain optimal shade conditions, as excessive shade increases humidity, promoting fungal growth.</li>
+          <li><b>Pruning:</b> Regularly prune affected and overgrown areas to improve airflow and reduce moisture.</li>
+          <li><b>Sanitation:</b> Remove and destroy infected leaves, twigs, and debris to reduce fungal spore sources.</li>
+          <li><b>Plant Spacing:</b> Ensure proper spacing between tea plants to promote ventilation and reduce humidity.</li>
+        </ul>
+        <p><strong>Soil and Water Management:</strong></p>
+        <ul>
+          <li><b>Drainage:</b> Prevent waterlogging by ensuring proper drainage systems.</li>
+          <li><b>Balanced Fertilization:</b> Use fertilizers with balanced nitrogen, potassium, and phosphorus to boost plant resistance.</li>
+        </ul>
+      
+        <h6>2. Biological Control</h6>
+        <ul>
+          <li><b>Biofungicides:</b> Apply biofungicides containing beneficial microbes like <i>Trichoderma harzianum</i> or <i>Bacillus subtilis</i>.</li>
+          <li><b>Natural Predators:</b> Encourage beneficial microorganisms in the ecosystem to maintain natural pest and disease control.</li>
+        </ul>
+      
+        <h6>3. Chemical Control</h6>
+        <p><strong>Recommended Fungicides:</strong></p>
+        <ul>
+          <li><b>Copper Oxychloride (0.2%):</b> Spray during early infection stages.</li>
+          <li><b>Mancozeb (0.25%):</b> Effective against fungal growth.</li>
+          <li><b>Propiconazole (0.1%):</b> Use for systemic fungal control.</li>
+        </ul>
+        <p><strong>Spraying Schedule:</strong> Apply fungicides every 10–15 days during high humidity periods.</p>
+        <p><strong>Safety Precautions:</strong> Avoid fungicide overuse to prevent resistance and follow safety guidelines.</p>
+      
+        <h6>4. Monitoring and Early Detection</h6>
+        <ul>
+          <li><b>Regular Surveillance:</b> Conduct field inspections to identify early signs of infection.</li>
+          <li><b>Field Data Logging:</b> Record occurrences, climatic conditions, and treatment effectiveness to build a database.</li>
+        </ul>
+      
+        <h6>5. Integrated Disease Management (IDM)</h6>
+        <ul>
+          <li>Combine cultural, biological, and chemical methods for effective control.</li>
+          <li>Promote planting of disease-resistant tea varieties, if available.</li>
+        </ul>
+      
+        <h6>6. Technological Advancements</h6>
+        <ul>
+          <li><b>Image-Based Detection:</b> Use AI models to detect Bird’s Eyespot with high accuracy.</li>
+          <li><b>Drones and Sensors:</b> Deploy drones to survey plantations and monitor environmental conditions.</li>
+        </ul>
+      
+        <h6>7. Post-Infection Practices</h6>
+        <ul>
+          <li><b>Immediate Isolation:</b> Isolate affected plants and sterilize tools before use elsewhere.</li>
+          <li><b>Destruction of Infected Leaves:</b> Safely burn or compost infected leaves to prevent spread.</li>
+          <li><b>Recovery Support:</b> Provide adequate nutrients to help plants recover.</li>
+        </ul>
+      
+        <h6>8. Education and Awareness</h6>
+        <ul>
+          <li><b>Workshops for Farmers:</b> Conduct training sessions on disease identification and management.</li>
+          <li><b>Awareness Campaigns:</b> Educate stakeholders on the economic impacts and importance of timely management.</li>
+        </ul>
+      
+        <p>A well-designed management system combining preventive measures, biological and chemical controls, and technological interventions can significantly reduce the impact of Bird’s Eyespot on tea plantations. Early detection, regular monitoring, and education are key to ensuring long-term sustainability and productivity.</p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gray Blight Modal -->
+<div class="modal fade" id="modalGrayBlight" tabindex="-1" aria-labelledby="modalGrayBlightLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalGrayBlightLabel">Gray Blight</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          <strong>Details about Gray Blight Disease:</strong>
+        </p>
+        <p>
+          Gray blight is a fungal disease caused by <em>Pestalotiopsis theae</em>, which commonly affects tea plantations. It can cause significant yield loss if not managed effectively. Below are the comprehensive measures and management systems to prevent, treat, and manage Gray Blight:
+        </p>
+        <img src="static\images\Gray blight.jpg" alt="image404">
+        <h5>Preventive Measures:</h5>
+        <ul>
+          <li><strong>Regular Pruning:</strong> Prune tea bushes regularly to maintain good air circulation and remove diseased or weak leaves.</li>
+          <li><strong>Sanitation:</strong> Clear and destroy fallen leaves and debris to prevent infection.</li>
+          <li><strong>Shade Management:</strong> Avoid excessive shading and maintain balanced shade trees.</li>
+          <li><strong>Fungal-Free Nursery Practices:</strong> Use disease-free planting materials and sterilized soil for seedlings.</li>
+        </ul>
+        <h5>Chemical Management:</h5>
+        <ul>
+          <li><strong>Fungicide Sprays:</strong> Use recommended fungicides like Mancozeb, Copper Oxychloride, or Carbendazim. Apply early or during favorable conditions for fungus.</li>
+          <li><strong>Integrated Spraying:</strong> Combine systemic and contact fungicides for better results.</li>
+          <li><strong>Avoid Overuse:</strong> Rotate fungicides to prevent resistance.</li>
+        </ul>
+        <h5>Biological Control:</h5>
+        <ul>
+          <li><strong>Antagonistic Microorganisms:</strong> Use <em>Trichoderma spp.</em> and <em>Pseudomonas fluorescens</em> to suppress fungal growth.</li>
+          <li><strong>Organic Sprays:</strong> Apply neem oil or other antifungal plant-based oils.</li>
+        </ul>
+        <h5>Cultural Practices:</h5>
+        <ul>
+          <li><strong>Optimized Plant Spacing:</strong> Ensure proper spacing for airflow and sunlight.</li>
+          <li><strong>Drainage Management:</strong> Maintain proper drainage systems to prevent waterlogging.</li>
+          <li><strong>Balanced Fertilization:</strong> Use balanced fertilizers to enhance plant resistance and avoid excessive nitrogen.</li>
+          <li><strong>Seasonal Monitoring:</strong> Conduct regular inspections, especially during humid and wet seasons.</li>
+        </ul>
+        <h5>Digital and AI-Based Disease Management:</h5>
+        <ul>
+          <li><strong>Early Detection Systems:</strong> Use image-based disease detection models to identify early symptoms of Gray Blight.</li>
+          <li><strong>Disease Mapping:</strong> Create heatmaps to focus treatments on infected areas.</li>
+          <li><strong>Automated Sprayers:</strong> Use AI-powered sprayers for precise fungicide application.</li>
+        </ul>
+        <h5>Post-Infection Measures:</h5>
+        <ul>
+          <li><strong>Immediate Removal:</strong> Remove and destroy infected leaves or branches.</li>
+          <li><strong>Quarantine Affected Areas:</strong> Restrict movement of workers and tools from infected zones.</li>
+          <li><strong>Follow-Up Fungicide Treatment:</strong> Apply fungicides to prevent secondary infections.</li>
+        </ul>
+        <h5>Knowledge Sharing and Training:</h5>
+        <ul>
+          <li><strong>Farmer Training:</strong> Train workers to identify early symptoms of Gray Blight, such as brown lesions with gray centers.</li>
+          <li><strong>Community Collaboration:</strong> Share knowledge and coordinate measures to avoid cross-infection.</li>
+          <li><strong>Mobile Alerts:</strong> Send disease warnings and weather alerts via mobile apps.</li>
+        </ul>
+        <h5>Environmental Adjustments:</h5>
+        <ul>
+          <li><strong>Microclimate Management:</strong> Reduce humidity through pruning and shade management.</li>
+          <li><strong>Resistant Varieties:</strong> Plant disease-resistant tea cultivars in areas prone to Gray Blight.</li>
+        </ul>
+        <p>
+          By combining these measures with advanced detection technologies, tea plantations can effectively control Gray Blight and ensure sustainable agricultural practices.
+        </p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- White Spot Modal -->
+<div class="modal fade" id="modalWhiteSpot" tabindex="-1" aria-labelledby="modalWhiteSpotLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalWhiteSpotLabel">White Spot</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Understanding White Spot Disease</strong></p>
+        <p>White Spot disease is caused by a fungal pathogen that primarily affects tea leaves, leading to reduced photosynthesis, poor growth, and compromised quality. Early identification and proper management can help mitigate its impact.</p>
+        <img src="static\images\White Spot.jpg" alt="image404">
+        <p><strong>Measures for Managing White Spot</strong></p>
+        
+        <p><strong>1. Preventive Measures</strong></p>
+        <ul>
+          <li><strong>Proper Spacing of Plants:</strong> Ensure adequate spacing between plants to improve airflow and reduce humidity, which discourages fungal growth.</li>
+          <li><strong>Sanitation Practices:</strong> Regularly remove fallen or infected leaves from the plantation to prevent the spread of spores.</li>
+          <li><strong>Use Resistant Varieties:</strong> Consider planting tea varieties that are resistant or less susceptible to fungal diseases.</li>
+          <li><strong>Soil Health Management:</strong> Ensure proper drainage in the soil to avoid waterlogging, which creates favorable conditions for fungal proliferation.</li>
+        </ul>
+        
+        <p><strong>2. Cultural Practices</strong></p>
+        <ul>
+          <li><strong>Pruning and Thinning:</strong> Periodically prune and thin tea bushes to improve light penetration and airflow within the canopy.</li>
+          <li><strong>Balanced Fertilization:</strong> Avoid overuse of nitrogen-rich fertilizers, as they can promote excessive, tender leaf growth susceptible to fungal infections.</li>
+          <li><strong>Mulching:</strong> Apply organic mulch to suppress weed growth and maintain soil moisture while reducing soil splash during irrigation.</li>
+        </ul>
+        
+        <p><strong>3. Chemical Control</strong></p>
+        <ul>
+          <li><strong>Fungicide Application:</strong> Use fungicides such as Copper-based compounds (e.g., copper oxychloride) or Systemic fungicides containing Triazoles. Apply according to the manufacturer's recommended dosage and safety guidelines.</li>
+          <li><strong>Spray Timing:</strong> Begin fungicide applications at the early stages of the disease or during conditions favorable for infection (e.g., high humidity and moderate temperatures).</li>
+        </ul>
+        
+        <p><strong>4. Biological Control</strong></p>
+        <ul>
+          <li>Introduce beneficial microbes like <i>Trichoderma spp.</i> or <i>Bacillus subtilis</i>, which can act as biological antagonists to the White Spot pathogen.</li>
+          <li>Encourage natural predators of fungal spores, such as mycoparasites, to maintain ecological balance in the plantation.</li>
+        </ul>
+        
+        <p><strong>5. Monitoring and Early Detection</strong></p>
+        <ul>
+          <li>Conduct regular inspections of tea plants, especially during high-risk seasons (humid and wet conditions).</li>
+          <li>Use mobile-based disease detection systems (like an AI-powered system) to identify infections at an early stage and take timely action.</li>
+        </ul>
+        
+        <p><strong>6. Integrated Pest Management (IPM) Approach</strong></p>
+        <ul>
+          <li>Combine cultural, biological, and chemical control methods to create a sustainable and eco-friendly management strategy.</li>
+          <li>Avoid over-reliance on fungicides to prevent the development of resistance in pathogens.</li>
+        </ul>
+        
+        <p><strong>7. Post-Infection Care</strong></p>
+        <ul>
+          <li><strong>Quarantine Infected Areas:</strong> Isolate affected sections of the plantation to prevent further spread.</li>
+          <li><strong>Recovery Boosters:</strong> Apply foliar sprays containing micronutrients like zinc and manganese to strengthen plant recovery post-infection.</li>
+        </ul>
+        
+        <p><strong>8. Awareness and Training</strong></p>
+        <ul>
+          <li>Train tea plantation workers on identifying symptoms of White Spot, such as small, round, white patches on leaves.</li>
+          <li>Disseminate best practices and guidelines for managing the disease to plantation managers and workers.</li>
+        </ul>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anthracnose Modal -->
+<div class="modal fade" id="modalAnthracnose" tabindex="-1" aria-labelledby="modalAnthracnoseLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalAnthracnoseLabel">Anthracnose</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Measures and Management Systems for Treating Anthracnose</h5>
+        <img src="static\images\Anthracnose.jpg" alt="image404">
+      
+        <h5>Preventive Measures</h5>
+        <ul>
+          <li><strong>Selection of Resistant Varieties:</strong> Choose plant varieties that are resistant or less susceptible to anthracnose. Use disease-free seeds and planting materials.</li>
+          <li><strong>Proper Planting Techniques:</strong> Avoid planting susceptible crops in areas with a history of anthracnose and ensure adequate spacing between plants to improve air circulation.</li>
+          <li><strong>Crop Rotation:</strong> Rotate crops with non-host plants to reduce fungal spores in the soil.</li>
+          <li><strong>Sanitation:</strong> Remove and destroy infected plant debris and fallen leaves, and regularly prune dead or infected branches.</li>
+          <li><strong>Water Management:</strong> Avoid overhead irrigation and water plants early in the day to allow foliage to dry quickly.</li>
+          <li><strong>Soil Management:</strong> Maintain healthy soil with proper fertilization, pH balance, and organic matter addition.</li>
+        </ul>
+        <h5>Cultural Management</h5>
+        <ul>
+          <li><strong>Timely Harvesting:</strong> Harvest fruits and vegetables as soon as they ripen to minimize exposure to the fungus.</li>
+          <li><strong>Weed Control:</strong> Remove weeds that can act as alternate hosts for the fungus.</li>
+          <li><strong>Avoid Wounding Plants:</strong> Handle plants carefully to prevent wounds that can serve as entry points for the fungus.</li>
+        </ul>
+      
+        <h5>Chemical Control</h5>
+        <ul>
+          <li><strong>Fungicides:</strong> Use copper-based formulations, chlorothalonil, or mancozeb for preventive and curative treatment. Apply systemic fungicides like azoxystrobin or propiconazole for severe infections.</li>
+          <li><strong>Seed Treatment:</strong> Treat seeds with fungicides or hot water before planting to reduce seed-borne infection.</li>
+        </ul>
+      
+        <h5>Biological Control</h5>
+        <ul>
+          <li><strong>Beneficial Microorganisms:</strong> Use biological agents like <i>Trichoderma harzianum</i> or <i>Bacillus subtilis</i> to suppress fungal growth.</li>
+          <li><strong>Compost Tea:</strong> Apply compost tea containing beneficial microbes as a foliar spray.</li>
+        </ul>
+      
+        <h5>Integrated Disease Management (IDM)</h5>
+        <ul>
+          <li><strong>Combine Approaches:</strong> Use a mix of cultural, chemical, and biological control methods for effective management. Monitor fields regularly to detect early signs of anthracnose.</li>
+          <li><strong>Timing of Interventions:</strong> Apply fungicides or biological agents during critical periods such as flowering and fruit development.</li>
+        </ul>
+      
+        <h5>Post-Harvest Management</h5>
+        <ul>
+          <li><strong>Proper Handling and Storage:</strong> Handle produce carefully to avoid bruises and cuts. Store fruits and vegetables in cool, dry conditions to prevent fungal growth.</li>
+          <li><strong>Cleaning and Disinfection:</strong> Clean storage containers and tools with disinfectants to reduce fungal contamination.</li>
+        </ul>
+      
+        <h5>Long-Term Measures</h5>
+        <ul>
+          <li><strong>Breeding Programs:</strong> Support the development of anthracnose-resistant crop varieties.</li>
+          <li><strong>Awareness and Training:</strong> Educate farmers about anthracnose identification, prevention, and management practices.</li>
+          <li><strong>Monitoring and Research:</strong> Conduct regular field surveys to understand disease patterns and improve management strategies.</li>
+        </ul>
+      
+        <p>
+          By implementing these measures, anthracnose can be effectively controlled, ensuring healthy plant growth and improved crop yields.
+        </p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Brown Blight Modal -->
+<div class="modal fade" id="modalBrownBlight" tabindex="-1" aria-labelledby="modalBrownBlightLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalBrownBlightLabel">Brown Blight</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>Measures and Management Systems for Treating Brown Blight</h5>
+        <p>
+          Brown Blight is a fungal disease caused by <em>Colletotrichum camelliae</em>, which significantly affects tea plants, leading to reduced yield and quality. Effective measures and management strategies include:
+        </p>
+        <img src="static\images\Brown Blight.jpg" alt="image404">
+        <h5>1. Cultural Practices</h5>
+        <ul>
+          <li><strong>Pruning and Hygiene:</strong> Regularly prune and remove infected leaves, twigs, and branches to minimize the spread of the fungus. Dispose of infected plant material away from tea plantations.</li>
+          <li><strong>Spacing and Aeration:</strong> Ensure proper spacing between plants to improve air circulation and reduce humidity levels.</li>
+          <li><strong>Weed Control:</strong> Remove weeds as they can harbor pathogens and increase competition for nutrients.</li>
+          <li><strong>Drainage Management:</strong> Maintain good drainage to avoid waterlogging, which can exacerbate fungal infections.</li>
+        </ul>
+      
+        <h5>2. Chemical Control</h5>
+        <ul>
+          <li><strong>Fungicides:</strong> Use appropriate fungicides such as copper oxychloride, carbendazim, or mancozeb. Follow the recommended dosages and application intervals to avoid resistance.</li>
+          <li><strong>Preventive Sprays:</strong> Apply fungicides as preventive measures, especially before the rainy season when humidity is high.</li>
+        </ul>
+      
+        <h5>3. Biological Control</h5>
+        <ul>
+          <li><strong>Use of Biocontrol Agents:</strong> Introduce beneficial fungi or bacteria, such as <em>Trichoderma spp.</em>, to suppress the growth of <em>Colletotrichum camelliae</em>.</li>
+          <li><strong>Natural Antagonists:</strong> Promote the growth of naturally occurring antagonists in the soil that inhibit fungal growth.</li>
+        </ul>
+      
+        <h5>4. Integrated Pest Management (IPM)</h5>
+        <p>
+          Combine cultural, chemical, and biological control methods for sustainable disease management. Regularly monitor disease incidence and severity to decide on intervention thresholds. Train workers to recognize symptoms early and implement timely interventions.
+        </p>
+      
+        <h5>5. Resistant Varieties</h5>
+        <p>
+          Cultivate tea clones or varieties that show resistance or tolerance to Brown Blight. Collaborate with agricultural research institutes to adopt newly developed resistant strains.
+        </p>
+      
+        <h5>6. Environmental Management</h5>
+        <ul>
+          <li><strong>Shade Management:</strong> Properly manage shade trees to ensure optimal light and reduce excessive humidity.</li>
+          <li><strong>Mulching:</strong> Use organic mulches to retain soil moisture and improve soil health, without creating conditions conducive to fungal growth.</li>
+          <li><strong>Soil pH Regulation:</strong> Maintain soil pH within the recommended range for tea cultivation (4.5-5.5).</li>
+        </ul>
+      
+        <h5>7. Monitoring and Early Detection</h5>
+        <p>
+          Conduct regular scouting to identify early symptoms of Brown Blight, such as brown spots with concentric rings on leaves. Implement geographic mapping of disease-prone areas for targeted management.
+        </p>
+      
+        <h5>8. Training and Awareness</h5>
+        <p>
+          Educate farmers and workers about disease symptoms, spread, and control methods. Conduct workshops or sessions on sustainable farming practices and safe fungicide use.
+        </p>
+      
+        <p>
+          By implementing these measures, tea growers can effectively manage Brown Blight, reducing its impact on crop health and ensuring sustainable production.
+        </p>
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add more modals for each disease -->
+
+                  </p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                  <p>
+                    <span class="w3-padding-large w3-right"
+                      ><b>Comments  </b> <span class="w3-badge">2</span></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END BLOG ENTRIES -->
+        </div>
+
+        <!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+    <!-- File Upload Section -->
+    <div
+      class="w3-container"
+      style="
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      "
+    >
+
+      <!-- Drag and Drop or Upload Section -->
+      <div
+        id="dropZone"
+        style="
+          width: 100%;
+          height: 250px;
+          background-color:rgb(251, 248, 252);
+          border-radius: 12px;
+          border: 2px dashedrgb(205, 140, 209);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.3s ease-in-out;
+        "
+        onmouseover="this.style.backgroundColor='#eef2ff'; this.style.borderColor='#6366f1';"
+        onmouseout="this.style.backgroundColor='#f8fafc'; this.style.borderColor='#cbd5e1';"
+      >
+        <!-- Cloud Icon -->
+        <span
+          class="material-symbols-outlined"
+          style="
+            font-size: 90px;
+            color:rgb(100, 100, 106);
+            margin: 20px auto;
+            text-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+          "
+        >
+          cloud_upload
+        </span>
+
+        <p
+          id="dropZoneText"
+          style="
+            font-size: 16px;
+            color: #4b5563;
+            margin-bottom: 10px;
+            font-weight: 500;
+          "
+        >
+          Drag and Drop Image or
+        </p>
+
+        <!-- Upload Button Inside the Box -->
+        <button
+          id="uploadButton"
+          class="w3-button"
+          onclick="document.getElementById('imageInput').click();"
+          style="
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #6366f1;
+            color: #ffffff;
+            border: none;
+            border-radius: 19px;
+            box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+          "
+          onmouseover="this.style.backgroundColor='#4f46e5';"
+          onmouseout="this.style.backgroundColor='#6366f1';"
+        >
+          Upload Image
+        </button>
+
+        <input
+          id="imageInput"
+          type="file"
+          name="image"
+          accept="image/*"
+          style="display: none;"
+        />
+      </div>
+
+      <!-- Uploaded Image Preview -->
+      <div
+        id="previewContainer"
+        style="
+          display: none;
+          text-align: center;
+          margin-top: 15px;
+        "
+      >
+        <img
+          id="imagePreview"
+          src="#"
+          alt="Uploaded Image"
+          style="
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: cover;
+            margin-top: 10px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          "
+        />
+      </div>
+
+      <!-- Prediction Output -->
+      <div
+        id="predictionOutput"
+        class="w3-container"
+        style="margin-top: 20px;"
+      >
+        <h5
+          style="
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 8px;
+          "
+        >
+          Prediction Result:
+        </h5>
+        <p
+          id="resultText"
+          style="
+            font-size: 16px;
+            color: #4b5563;
+            margin: 0;
+          "
+        >
+          Your prediction will appear here.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<!-- Posts -->
+        <div class="w3-col l4">
+          <div class="w3-card w3-margin">
+            <div class="w3-container w3-padding">
+              <h4>Popular Posts</h4>
+            </div>
+            <ul class="w3-ul w3-hoverable w3-white">
+              <li class="w3-padding-16">
+                  <a href="https://rohit1239.pythonanywhere.com/" style="text-decoration: none; color: black;">
+                  <img
+                  src="static/images/Crop Recommends.jpg"
+                  alt="Image"
+                  class="w3-left w3-margin-right"
+                  style="width: 50px"
+                  />
+                  <span class="w3-large">Crop Recommendation System</span><br />
+                  <span>Read More...</span>
+                </a> 
+                </li>
+              <li class="w3-padding-16">
+                  <a href="composition.html" style="text-decoration: none; color: black;">
+                  <img
+                  src="static\images\Tea Composition.jpg"
+                  alt="Image"
+                  class="w3-left w3-margin-right"
+                  style="width: 50px"
+                  />
+                  <span class="w3-large">Tea Composition Analysis</span><br />
+                  <span>Read More...</span>
+                </a>
+                </li>
+              <li class="w3-padding-16">
+                  <a href="fertilizers.html" style="text-decoration: none; color: black;">
+                  <img
+                  src="static\images\Fertilizers.jpg"
+                  alt="Image"
+                  class="w3-left w3-margin-right"
+                  style="width: 50px"
+                  />
+                  <span class="w3-large">Some Common Fertilizers</span><br/>
+                  <span>Read More...</span>
+                </a>
+                </li>
+              <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+                  <a href="practices.html" style="text-decoration: none; color: black;">
+                  <img
+                  src="static\images\Best Practices.jpg"
+                  alt="Image"
+                  class="w3-left w3-margin-right"
+                  style="width: 50px"
+                  />
+                  <span class="w3-large">Best Practices</span><br />
+                  <span>Read More...</span>
+                </a>
+                </li>
+            </ul>
+          </div>
+          
+
+          <!-- Labels / tags -->
+          <div class="w3-card w3-margin">
+            <div class="w3-container w3-padding">
+              <h4>Tags</h4>
+            </div>
+            <div class="w3-container w3-white">
+              <p>
+                <br>
+                <span class="w3-tag w3-black w3-margin-bottom"
+                  >Machine Learning</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Tea Analysis</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Predictive Analytics</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Django</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Data Science</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Recommendation</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >Render</span
+                >
+                <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"
+                  >React</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- END Introduction Menu -->
+        </div>
+
+        <!-- END GRID -->
+      </div>
+      <br />
+
+      <!-- END w3-content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+      <button
+        class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom"
+      >
+        Previous
+      </button>
+      <button class="w3-button w3-black w3-padding-large w3-margin-bottom">
+        Next »
+      </button>
+      <p>
+        Powered by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >BaunVita</a>
+      </p>
+    </footer>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
