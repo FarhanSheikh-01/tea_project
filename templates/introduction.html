@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +36,10 @@
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            padding-top: 25px;
-            height: 0;
+            width: 42vw;
+            {% comment %} padding-bottom: 56.25%; /* 16:9 aspect ratio */ {% endcomment %}
+            {% comment %} padding-top: 25px; {% endcomment %}
+            height: 52vh;
         }
         .video-container iframe {
             position: absolute;
@@ -63,8 +66,9 @@
     <!-- Added Video Section -->
     <h2>Learn More</h2>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="864" height="486" src="https://www.youtube.com/embed/wVzO40StNc8" title="Significance And Importance Of Tea Industry In India" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    
 
     <h2>Significance of Tea Plantation in India</h2>
     <p>

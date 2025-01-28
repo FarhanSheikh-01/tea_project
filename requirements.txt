@@ -1,0 +1,6 @@
+numpy
+PIL
+django
+Keras
+tensorflow
+joblib

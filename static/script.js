@@ -1,68 +1,72 @@
-const dropZone = document.getElementById('dropZone');
-  const dropZoneText = document.getElementById('dropZoneText');
-  const imageInput = document.getElementById('imageInput');
-  const imagePreview = document.getElementById('imagePreview');
-  const previewContainer = document.getElementById('previewContainer');
-  const resultText = document.getElementById('resultText');
-
-  // Click on drop zone to trigger file input
-  dropZone.addEventListener('click', () => {
-    imageInput.click();
-  });
-
-  // Drag-and-drop functionality
-  dropZone.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    dropZone.style.borderColor = 'blue';
-  });
-
-  dropZone.addEventListener('dragleave', () => {
-    dropZone.style.borderColor = 'black';
-  });
-
-  dropZone.addEventListener('drop', (e) => {
-    e.preventDefault();
-    dropZone.style.borderColor = 'black';
-    const file = e.dataTransfer.files[0];
-    if (file && file.type.startsWith('image/')) {
-      handleFileUpload(file);
-    } else {
-      alert('Please upload a valid image file.');
-    }
-  });
-
-  // Handle file input change
-  imageInput.addEventListener('change', (e) => {
-    const file = e.target.files[0];
+function handleFileUpload(event) {
+    const file = event.target.files[0]; // Get the uploaded file
     if (file) {
-      handleFileUpload(file);
+      const formData = new FormData();
+      formData.append("image", file);
+  
+      // Show the uploaded image inside the drag-and-drop container
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // Update the drag-and-drop box with the uploaded image preview
+        const imagePreview = document.getElementById("imagePreview");
+        const dropZoneText = document.getElementById("dropZoneText");
+        const cloudIcon = document.getElementById("cloudIcon");
+        const uploadButton = document.getElementById("uploadButton");
+  
+        // Set the preview image source and display it
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = "block";
+  
+        // Hide placeholder elements
+        dropZoneText.style.display = "none";
+        cloudIcon.style.display = "none";
+        uploadButton.style.display = "none";
+      };
+      reader.readAsDataURL(file);
+  
+      // Send the file to the backend
+      fetch("/predict_sickness/", {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-CSRFToken": "{{ csrf_token }}", // Include CSRF token
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          const resultText = document.getElementById("resultText");
+          if (data.status === "success") {
+            // Delay showing the prediction result by 1 second
+            setTimeout(() => {
+              resultText.innerText = `Prediction: ${data.result} (Confidence: ${data.confidence})`;
+            }, 1000);
+          } else {
+            // Delay showing the error message by 1 second
+            setTimeout(() => {
+              resultText.innerText = `Error: ${data.message}`;
+            }, 1000);
+          }
+        })
+        .catch((error) => {
+          const resultText = document.getElementById("resultText");
+          setTimeout(() => {
+            resultText.innerText = `Error: ${error}`;
+          }, 1000);
+        });
     }
-  });
-
-  // Handle file upload and preview
-  function handleFileUpload(file) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      imagePreview.src = e.target.result;
-      previewContainer.style.display = 'block';
-      dropZone.style.display = 'none';
-      sendForPrediction(file);
-    };
-    reader.readAsDataURL(file);
   }
-
-  // Send image to server for prediction
-  async function sendForPrediction(file) {
-    const formData = new FormData();
-    formData.append('image', file);
-
-    resultText.textContent = 'Processing...';
-
-    try {
-      const response = await fetch('/predict', { method: 'POST', body: formData });
-      const data = await response.json();
-      resultText.textContent = `Prediction: ${data.prediction}`;
-    } catch (error) {
-      resultText.textContent = 'Error in prediction. Please try again.';
+  
+  function handleDrop(event) {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    const input = document.getElementById("imageInput");
+    if (file) {
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      input.files = dataTransfer.files;
+  
+      // Trigger the onchange event to handle the file
+      input.dispatchEvent(new Event("change"));
     }
   }
+  
