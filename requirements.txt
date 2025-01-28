@@ -1,10 +1,10 @@
-numpy
-PIL
+numpy==2.2.2
+PIL==11.1.0
 django
-Keras
-tensorflow
+keras==3.8.0
+tensorflow==2.18.0
 joblib
 pillow
 gunicorn
 whitenoise
-scikit-learn
+scikit-learn==1.6.1
