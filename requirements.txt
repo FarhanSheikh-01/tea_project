@@ -4,3 +4,7 @@ django
 Keras
 tensorflow
 joblib
+pillow
+gunicorn
+whitenoise
+scikit-learn
