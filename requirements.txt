@@ -1,5 +1,4 @@
 numpy==2.2.2
-PIL==11.1.0
 django
 keras==3.8.0
 tensorflow==2.18.0
